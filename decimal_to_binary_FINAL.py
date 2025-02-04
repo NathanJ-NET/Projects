@@ -24,9 +24,15 @@ def start_decimal_to_binary_conversion():
             except ValueError:
                 print("I asked for a valid binary number, not whatever that is. Try again.")
                 continue  
-        
+        elif UserPrompt1 == '3':
+            hexa_num = input("Enter your hexadecimal value here: ")
+            print(f"You want {hexa_num}? Sounds good! Doing calculations and stuff...")
+
+            try:
+                hexa_num = 
+                print(f"Here's your hexadecimal value {hexa_num} as a binary value: {}.")
         else:
-            print("I asked for a 1 or a 2, not whatever the hell you entered. Try again.")
+            print("I asked for a 1, 2, 3, 4, 5 or 6, not whatever the hell you entered. Try again.")
             continue  
 
         continue_or_exit = input("Would you like to perform another conversion? (y/n): ")
