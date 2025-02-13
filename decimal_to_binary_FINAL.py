@@ -29,8 +29,32 @@ def start_decimal_to_binary_conversion():
             print(f"You want {hexa_num}? Sounds good! Doing calculations and stuff...")
 
             try:
-                hexa_num = 
-                print(f"Here's your hexadecimal value {hexa_num} as a binary value: {}.")
+                binary_num = bin(int(hexa_num, 16)) [2:]
+                print(f"Here's your hexadecimal value {hexa_num} as a binary value: {binary_num}.")
+            except ValueError:
+                print("I asked for a valid hexadecimal number, not whatever that is. Try again.")
+                continue  
+        elif UserPrompt1 == '4':
+            binary_num = input("Enter your binary value here: ")
+            print(f"You want {binary_num}? Sounds good! Doing calculations and stuff...")   
+
+            try:
+                hexadecimal_num = hex(int(binary_num, 2))[2:].upper()  
+                print(f"Here's your binary value {binary_num} in hexadecimal: {hexadecimal_num}")
+            except ValueError:
+                print("I asked for a valid binary number, not whatever that is. Try again.")
+                continue 
+        elif UserPrompt1 == '5':
+            decimal_num = print(f"You want {decimal_num}? Sounds good! Doing calculations and stuff...")
+        
+
+            try:
+                decimal_num = int(decimal_num)
+                hexadecimal_num = hex(hexadecimal_num)[2:].upper()
+                print(f"Here's your decimal value {decimal_num} as a hexadecimal value: {hexadecimal_num}")
+            except ValueError:
+                print("I asked for a valid integer, not whatever that is. Try again.")
+            continue 
         else:
             print("I asked for a 1, 2, 3, 4, 5 or 6, not whatever the hell you entered. Try again.")
             continue  
