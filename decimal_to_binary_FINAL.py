@@ -45,22 +45,39 @@ def start_decimal_to_binary_conversion():
                 print("I asked for a valid binary number, not whatever that is. Try again.")
                 continue 
         elif UserPrompt1 == '5':
-            decimal_num = print(f"You want {decimal_num}? Sounds good! Doing calculations and stuff...")
-        
+            decimal_num = input("Enter your decimal value here: ")
+            print(f"You want {decimal_num}? Sounds good! Doing calculations and stuff...")
+
 
             try:
                 decimal_num = int(decimal_num)
-                hexadecimal_num = hex(hexadecimal_num)[2:].upper()
+                hexadecimal_num = hex(decimal_num)[2:].upper()
                 print(f"Here's your decimal value {decimal_num} as a hexadecimal value: {hexadecimal_num}")
             except ValueError:
                 print("I asked for a valid integer, not whatever that is. Try again.")
-            continue 
+                continue 
+        elif UserPrompt1 == '6':
+            hexa_num = input("Enter your hexadecimal value here: ")
+            print(f"You want {hexa_num}? Sounds good, doing calculations and stuff...")
+            
+            try:
+                decimal_num = int(hexa_num, 16)
+                print(f"Here's your hexadecimal value {hexa_num} as a decimal number {decimal_num}")
+            except ValueError:
+                print("I asked for a valid hexadecimal number, not whatever that is. Try again.")
+                continue
         else:
             print("I asked for a 1, 2, 3, 4, 5 or 6, not whatever the hell you entered. Try again.")
             continue  
 
-        continue_or_exit = input("Would you like to perform another conversion? (y/n): ")
-        if continue_or_exit.lower() != 'y':
-            break
+        while True:
+            continue_or_exit = input("Would you like to perform another conversion? y/n: ")
+            if continue_or_exit.lower() == 'y':
+                break
+            elif continue_or_exit.lower() == 'n':
+                return 
+            else:
+                print("I asked for a y or an n, not whatever that is. Try again.")
+
 
 start_decimal_to_binary_conversion()
