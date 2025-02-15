@@ -87,7 +87,13 @@ def Conversions():
             if continue_or_exit.lower() == 'y':
                 print("\n")
                 break
+            if continue_or_exit.upper() == 'Y':
+                print("\n")
+                break
             elif continue_or_exit.lower() == 'n':
+                print("Goodbye!")
+                return  
+            elif continue_or_exit.upper() == 'N':
                 print("Goodbye!")
                 return  
             else:
