@@ -4,7 +4,6 @@ def Conversions():
         print("________________________________________________________________________________________________")
         if UserPrompt1 == '1': 
             decimal_num = input("Enter your decimal value here: ")
-            print(f"You want {decimal_num}? Sounds good! Doing calculations and stuff...")
             print("________________________________________________________________________________________________")
 
             try:
@@ -18,7 +17,6 @@ def Conversions():
 
         elif UserPrompt1 == '2':
             binary_num = input("Enter your binary value here: ")
-            print(f"You want {binary_num}? Sounds good! Doing calculations and stuff...")
 
             try:
                 decimal_num = int(binary_num, 2)
@@ -30,7 +28,6 @@ def Conversions():
 
         elif UserPrompt1 == '3':
             hexa_num = input("Enter your hexadecimal value here: ")
-            print(f"You want {hexa_num}? Sounds good! Doing calculations and stuff...")
 
             try:
                 binary_num = bin(int(hexa_num, 16))[2:]
@@ -41,8 +38,7 @@ def Conversions():
                 continue  
 
         elif UserPrompt1 == '4':
-            binary_num = input("Enter your binary value here: ")
-            print(f"You want {binary_num}? Sounds good! Doing calculations and stuff...")   
+            binary_num = input("Enter your binary value here: ") 
 
             try:
                 hexadecimal_num = hex(int(binary_num, 2))[2:].upper()  
@@ -54,7 +50,6 @@ def Conversions():
 
         elif UserPrompt1 == '5':
             decimal_num = input("Enter your decimal value here: ")
-            print(f"You want {decimal_num}? Sounds good! Doing calculations and stuff...")
 
             try:
                 decimal_num = int(decimal_num)
@@ -67,7 +62,6 @@ def Conversions():
 
         elif UserPrompt1 == '6':
             hexa_num = input("Enter your hexadecimal value here: ")
-            print(f"You want {hexa_num}? Sounds good, doing calculations and stuff...")
             
             try:
                 decimal_num = int(hexa_num, 16)
